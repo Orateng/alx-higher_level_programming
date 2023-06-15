@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     value_map = {
-            "I": 1, "V": 5, "X": 10, "L": 50,
-            "C": 100, "D": 500, "M": 1000,
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000,
     }
     value = 0
     last_digit_value = 0
