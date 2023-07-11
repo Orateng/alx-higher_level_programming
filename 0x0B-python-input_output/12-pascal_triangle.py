@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+A function  that represents a Pascal triangle
+"""
+
+
 def pascal_triangle(n):
+    """Function for Pascal Triangle"""
     if n <= 0:
         return []
 
