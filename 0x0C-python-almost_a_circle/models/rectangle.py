@@ -16,13 +16,13 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
-    """Property method for width"""
     def width(self):
+        """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
-    """Setter method for width"""
     def width(self, value):
+        """Setter method for width"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -30,13 +30,13 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    """Property method for height"""
     def height(self):
+        """Set/get the height of the Rectangle."""
         return self.__height
 
     @height.setter
-    """Setter method for height"""
     def height(self, value):
+        """Setter method for height"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -44,13 +44,13 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    """Property method for x"""
     def x(self):
+        """Set/get the x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
-    """Setter method for x"""
     def x(self, value):
+        """Setter method for x"""
         if type(value) != int:
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -58,13 +58,13 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    """Property method for y"""
     def y(self):
+        """Set/get the coordinate of the Rectangle"""
         return self.__y
 
     @y.setter
-    """Setter method for y"""
     def y(self, value):
+        """Setter method for y"""
         if type(value) != int:
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -86,14 +86,6 @@ class Rectangle(Base):
             [print(" ", end="") for x in range(self.x)]
             [print("#", end="") for w in range(self.width)]
             print("")
-
-    def __str__(self):
-        """Returns the string representation of a rectangle"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                        self.__x,
-                                                        self.__y,
-                                                        self.__width,
-                                                        self.__height)
 
     def update(self, *args, **kwargs):
         """Update the rectangle objects with key arguments"""
@@ -140,3 +132,11 @@ class Rectangle(Base):
             "x": self.x,
             "y": self.y
         }
+
+    def __str__(self):
+        """Returns the string representation of a rectangle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)

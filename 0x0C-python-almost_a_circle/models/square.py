@@ -13,18 +13,14 @@ class Square(Rectangle):
         """Initializes attributes for the size of a square"""
         super().__init__(size, size, x, y, id)
 
-    def __str__(self):
-        """Returns objects that represents a Square"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
-
     @property
-    """Property of size for class Square"""
     def size(self):
+        """Get/set the size of the Square"""
         return self. width
 
     @size.setter
-    """Setter of size for class Square"""
     def size(self, value):
+        """Setter of size for class Square"""
         self.width = value
         self.height = value
 
@@ -54,7 +50,7 @@ class Square(Rectangle):
                     else:
                         self.id = v
                 elif k == "size":
-                    self.width = v
+                    self.size = v
                 elif k == "x":
                     self.x = v
                 elif k == "y":
@@ -68,3 +64,10 @@ class Square(Rectangle):
             "x": self.x,
             "y": self.y
         }
+
+    def __str__(self):
+        """Returns objects that represents a Square"""
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.width)
