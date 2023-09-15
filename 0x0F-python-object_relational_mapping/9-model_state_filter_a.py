@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-A script that prints the first State object
-from hbtn_0e_6_usa table in database
+A script that lists all State objects that contain
+the letter a from hbtn_0e_6_usa table in database
 """
 import sys
 from model_state import Base, State
@@ -15,8 +15,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).first()
-    if instance is None:
-        print("Nothing")
-    else:
+    for instance in session.query(State).filter(State.name.like('%a%')):
         print(instance.id, instance.name, sep=": ")
