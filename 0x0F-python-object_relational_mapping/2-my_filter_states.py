@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Lists all States from the datatbase with a
-name starting with N from database hbtn_0e_0_usa
+Displays all values in the states table
+hbtn_0e_0_usa where name matches the argument
 """
 import MySQLdb
 import sys

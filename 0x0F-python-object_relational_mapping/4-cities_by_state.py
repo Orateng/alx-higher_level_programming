@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Lists all States from the datatbase with a
-name starting with N from database hbtn_0e_0_usa
-"""
+"""Lists all cities from the database hbtn_0e_4_usa"""
 import MySQLdb
 import sys
 
