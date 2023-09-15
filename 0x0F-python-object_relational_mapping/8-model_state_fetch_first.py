@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Lists all declarative instance objects of State
-class from hbtn_0e_6_usa table in database
+A script that prints the first State object
+from hbtn_0e_6_usa table in database
 """
 import sys
 from model_state import Base, State
@@ -15,5 +15,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).order_by(State.id):
-        print(instance.id, instance.name, sep=": ")
+    init = session.query(State).first()
+    if init is None:
+        print("Nothing")
+    else:
+        print(init.id, init.name, sep=": ")
