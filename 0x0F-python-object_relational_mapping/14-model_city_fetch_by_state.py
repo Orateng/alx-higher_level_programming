@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints all City objects from 
+Prints all City objects from
 hbtn_0e_14_usa table in database
 """
 import sys
