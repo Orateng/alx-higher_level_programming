@@ -1,3 +1,3 @@
 #!/bin/bash
-# Display all HTTP methods the server of a given URL will accept.
+# Delete request to the URL passed as argument.
 curl -sX DELETE "$1"
